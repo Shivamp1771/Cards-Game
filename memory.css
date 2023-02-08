@@ -1,0 +1,89 @@
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  background-color: white;
+  width: 1380px;
+  margin: 0 auto;
+  border: 3px solid blue;
+  padding: 0 2em 1em;
+}
+h1 {
+  font-size: 150%;
+  color: blue;
+  margin-bottom: 0.5em;
+}
+label {
+  float: left;
+  width: 8em;
+}
+#tabs-2 {
+  display: none;
+}
+#tabs-3 {
+  display: none;
+}
+input,
+select {
+  width: 10em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+input[type="checkbox"] {
+  width: 2em;
+}
+header p {
+  margin: 0 2em 1em 0;
+}
+#new_game,
+#player,
+#high_score,
+#correct {
+  float: left;
+}
+
+.memory-games {
+  /* width: 640px; */
+  height: auto;
+  margin: auto;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+ height: 140px;
+  width: 120px;
+  margin: 15px 20px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  height: 150px;
+    width: 120px;
+   padding-right: 5px;
+    padding-bottom: 3px;
+    float: left;
+  position: absolute;
+  border-radius: 5px;
+  /* background: #1c7ccc; */
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
